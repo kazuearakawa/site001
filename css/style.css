@@ -125,21 +125,27 @@ nav{display: none}
 #section1 h2{
   margin-right: 45px;
 }
-#section1 .txt{
-  color:#6e4c21;
-  padding: 70px 25px 95px;
-  font-weight: normal;
-}
 #section1 .colWrap{
   display: flex;
   justify-content: center;
   flex: wrap
 }
 #section1 .colWrap .txt{
-  background:url(../images/sec1-txt.png) no-repeat
+  color:#6e4c21;
+  padding: 40px 25px 35px;
+  background:url(../images/sec1-bgTxt.png) no-repeat center center;
 }
-#section1 .s1{
-  background: url(../images/bg-1.jpg) no-repeat;
+#section1 .sec1{
+  position: relative;
+  background: url(../images/sec1-bg.jpg) no-repeat center center;
   width: 100%;
   height: 450px;
+}
+#section1 .sec1 img{
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
 }
