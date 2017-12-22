@@ -35,7 +35,7 @@ content */
 body{
   width: 100%;
   overflow-x: hidden;
-  background: url(../images/bg.png)no-repeat center center;
+  background: url(../images/bg.png)repeat center center;
   background-size: cover;
   /* 画像が読み込まれる前の背景色の指定 */
   background-color: #f39800;
