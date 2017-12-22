@@ -79,9 +79,30 @@ nav{display: none}
   left: 0;
   width: 155px;
   height: 150px;
-  background: url(../images/bg-top2.jpg);
+  background: url(../images/bg-top2.jpg)no-repeat center center;
   content: "";
 }
+.top-bg::before{
+  position: absolute;
+  bottom: -40px;
+  left: 0;
+  width: 163px;
+  height: 186px;
+  background: url(../images/bg-top3.png)no-repeat center center;
+  content: "";
+  z-index: 10;
+}
+.top-bg::after{
+  position: absolute;
+  bottom: -70px;
+  right: 0;
+  width: 121px;
+  height: 157px;
+  background: url(../images/bg-top4.png)no-repeat center center;
+  content: "";
+  z-index: 10;
+}
+
 .top-inner{
   position: absolute;
   /* top: 130px; */
@@ -98,30 +119,11 @@ nav{display: none}
   padding-left: 50px;
 }
 
-/* }
-.logo{
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-.logo img{
-  display: block;
-  margin: 0 auto;
-}
-.top h2 img{
-  position: absolute;
-  top: 0;
-  right: 0;
-  left: 0;
-  bottom: 0;
-  margin: auto;
-  z-index: 3;
-} */
 /********************
   #section1
 ********************/
 #section1 h2{
-  margin-right: 50px;
+  margin-right: 45px;
 }
 #section1 .txt{
   color:#6e4c21;
@@ -134,7 +136,7 @@ nav{display: none}
   flex: wrap
 }
 #section1 .colWrap .txt{
-  border:4px solid #cfa972
+  background:url(../images/sec1-txt.png) no-repeat
 }
 #section1 .s1{
   background: url(../images/bg-1.jpg) no-repeat;
