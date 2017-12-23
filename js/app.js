@@ -25,7 +25,7 @@ function loaded() {
 
   TweenMax.to('.top-inner', 1, {
     opacity: 1,
-    y: -100,
+    y: -300,
     x: 0,
     delay: 0.5,
     ease: Power4.easeOut,

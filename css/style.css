@@ -86,8 +86,8 @@ nav{display: none}
 
 .top-inner{
   position: absolute;
-  top: 230px;
-  left: 150px;
+  top: 55vh;
+  left: 15vw;
   z-index: 4;
   opacity: 0;
 }
