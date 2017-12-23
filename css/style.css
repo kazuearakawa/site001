@@ -8,8 +8,6 @@
 .u-mb55{margin-bottom: 55px;}
 .u-mb70{margin-bottom: 70px;}
 .u-mb100{margin-bottom: 100px;}
-.u-mb70{margin-bottom: 70px;}
-
 /********************
   default
 ********************/
@@ -17,8 +15,7 @@
 body{
   width: 100%;
   overflow-x: hidden;
-  background: url(../images/bg.png)repeat center center;
-  background-size: cover;
+  background: url(../images/bg.jpg)repeat;
   /* 画像が読み込まれる前の背景色の指定 */
   background-color: #f39800;
   font-weight: normal;
@@ -44,7 +41,6 @@ a{
   header
 ********************/
 nav{display: none}
-
 /********************
   top
 ********************/
@@ -52,7 +48,7 @@ nav{display: none}
   position: relative;
   width: 100%;
   height: 100vh;
-  background: url(../images/bg-top1.jpg) no-repeat center center;
+  background: url(../images/bg-top01.jpg) no-repeat center center;
   background-size: cover;
 }
 .top::after{
@@ -61,8 +57,11 @@ nav{display: none}
   left: 0;
   width: 155px;
   height: 150px;
-  background: url(../images/bg-top2.jpg)no-repeat center center;
+  background: url(../images/bg-top02.jpg)no-repeat center center;
   content: "";
+}
+.top-bg{
+  opacity: 0;
 }
 .top-bg::before{
   position: absolute;
@@ -70,7 +69,7 @@ nav{display: none}
   left: 0;
   width: 163px;
   height: 186px;
-  background: url(../images/bg-top3.png)no-repeat center center;
+  background: url(../images/bg-top03.png)no-repeat center center;
   content: "";
   z-index: 10;
 }
@@ -80,18 +79,17 @@ nav{display: none}
   right: 0;
   width: 121px;
   height: 157px;
-  background: url(../images/bg-top4.png)no-repeat center center;
+  background: url(../images/bg-top04.png)no-repeat center center;
   content: "";
   z-index: 10;
 }
 
 .top-inner{
   position: absolute;
-  /* top: 130px; */
-  /* left: 150px; */
-  top: 14vh;
-  left: 15vw;
+  top: 230px;
+  left: 150px;
   z-index: 4;
+  opacity: 0;
 }
 .top .logo img{
   display: block;
@@ -100,7 +98,6 @@ nav{display: none}
 .top .logo{
   padding-left: 50px;
 }
-
 /********************
   #section1
 ********************/
@@ -131,7 +128,6 @@ nav{display: none}
   bottom: 0;
   margin: auto;
 }
-
 /********************
   #section
 ********************/
@@ -140,10 +136,34 @@ nav{display: none}
   flex-wrap: wrap;
 }
 #section2 dl{
+  position: relative;
   width: 250px;
   background: #f0924d;
+  padding: 20px 15px;
 }
+#section2 dt{text-align: center;}
 #section2 dl:nth-child(3n+2){
   margin-right: 110px;
   margin-left: 110px;
+}
+#section2 p img{
+  max-width: 100%;
+  height: auto;
+}
+#section2 .bg{
+    position: absolute;
+    top: -12px;
+    left: 0;
+    right: 0;
+    width: 210px;
+    height: 245px;
+    margin: 0 auto;
+    background: #5a9e56;
+    z-index: -1;
+    -webkit-transform: rotate(85deg);
+    transform: rotate(85deg);
+}
+#section2 .bg:hover{
+    -webkit-animation: rotate202 .8s ease 0s;
+    animation: rotate202 .8s ease 0s
 }
