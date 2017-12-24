@@ -21,6 +21,9 @@ window.addEventListener('DOMContentLoaded', function(){
 }
 // ロード完了時に呼び出し
 function loaded() {
+  let wrap = document.querySelector('.wrap');
+  let footer = document.querySelector('footer');
+  let header = document.querySelector('header');
   TweenMax.to('.top', 1, {
    opacity: 1,
    ease: Power0.easeOut,
@@ -34,14 +37,23 @@ function loaded() {
     onStart: () =>{
       TweenMax.to('.top-bg', 1, {
   			opacity: 1,
-  			ease: Power4.easeOut})
+  			ease: Power4.easeOut,
+        onComplete: function(){
+         wrap.classList.add('is-block');
+         footer.classList.add('is-block');
+         header.classList.remove('is-overflowHidden');
+
+          TweenMax.to('.wrap', 1,{
+            opacity: 1,
+            ease: Power4.easeOut
+          })
         }
-      });
+      })
     }
   });
-
-
-  };
+  }
+  });
+};
 });
 
 /*load error*/
@@ -53,7 +65,7 @@ window.addEventListener('DOMContentLoaded',function(){
      let top = document.querySelector('.top');
      let topInner = document.querySelector('.top-inner');
      let topBg = document.querySelector('.top-bg');
-     top.classList.add('is-block');
-     topInner.classList.add('is-block');
-     topBg.classList.add('is-block');
+     top.classList.add('is-noOpaciy');
+     topInner.classList.add('is-noOpaciy');
+     topBg.classList.add('is-noOpaciy');
      }

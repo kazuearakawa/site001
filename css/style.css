@@ -7,8 +7,10 @@
 .u-mb50{margin-bottom: 50px;}
 .u-mb55{margin-bottom: 55px;}
 .u-mb70{margin-bottom: 70px;}
-.u-mb100{margin-bottom: 100px;}
-.is-block{opacity: 1}
+.u-mT100{margin-top: 100px;}
+.is-noOpaciy{opacity: 1}
+.is-block{display: block!important;}
+.is-overflowHidden{overflow: hidden;}
 /********************
   default
 ********************/
@@ -21,6 +23,7 @@ body{
   background-color: #f39800;
   font-weight: normal;
 }
+footer{display: none;}
 a{
   text-decoration: none;
   color: inherit;
@@ -29,6 +32,8 @@ a{
 .wrap{
   width: 980px;
   margin: 0 auto;
+  display: none;
+  opacity: 0;
 }
 .font{
   font-family: "メイリオ","游ゴシック体", sans-serif;
