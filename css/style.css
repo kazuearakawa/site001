@@ -8,6 +8,7 @@
 .u-mb55{margin-bottom: 55px;}
 .u-mb70{margin-bottom: 70px;}
 .u-mb100{margin-bottom: 100px;}
+.is-block{opacity: 1}
 /********************
   default
 ********************/
@@ -50,6 +51,7 @@ nav{display: none}
   height: 100vh;
   background: url(../images/bg-top01.jpg) no-repeat center center;
   background-size: cover;
+  opacity: 0;
 }
 .top::after{
   position: absolute;

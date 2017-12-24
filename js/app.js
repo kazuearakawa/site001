@@ -9,7 +9,6 @@ window.addEventListener('DOMContentLoaded', function(){
   ];
     console.log(imgCnt + " / " + IMG.length);// 何枚中何枚目かを表示
 
-
   for(let i = 0; i < IMG.length; i++){
     Img[i] = new Image();
     Img[i].src = IMG[i];
@@ -22,20 +21,20 @@ window.addEventListener('DOMContentLoaded', function(){
 }
 // ロード完了時に呼び出し
 function loaded() {
-
+  TweenMax.to('.top', 1, {
+   opacity: 1,
+   ease: Power0.easeOut,
+  onComplete: function(){
   TweenMax.to('.top-inner', 1, {
     opacity: 1,
     y: -300,
     x: 0,
-    delay: 0.5,
+    delay: 0.25,
     ease: Power4.easeOut,
     onStart: () =>{
-
       TweenMax.to('.top-bg', 1, {
   			opacity: 1,
-  			ease: Power0.easeOut,
-         onComplete: function(){
-          console.log('hoge');
+  			ease: Power4.easeOut})
         }
       });
     }
@@ -51,5 +50,10 @@ window.addEventListener('DOMContentLoaded',function(){
     setTimeout(stopload, 10000);
   });
    function stopload() {
-     console.log('10秒経過後にopacityを強制的に1へしたりする');
+     let top = document.querySelector('.top');
+     let topInner = document.querySelector('.top-inner');
+     let topBg = document.querySelector('.top-bg');
+     top.classList.add('is-block');
+     topInner.classList.add('is-block');
+     topBg.classList.add('is-block');
      }
