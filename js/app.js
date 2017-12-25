@@ -1,5 +1,8 @@
+'use strict';
 window.addEventListener('DOMContentLoaded', function(){
   setTimeout(stopload, 10000);
+  let loading = document.querySelector('.is-loading');
+  let content = document.querySelector('.is-content');
   let imgCnt = 0;// 読み込んだ数カウント
   let Img = [];// イメージオブジェクト
   let IMG = [
@@ -25,37 +28,48 @@ function loaded() {
   let wrap = document.querySelector('.wrap');
   let footer = document.querySelector('footer');
   let header = document.querySelector('header');
-  TweenMax.to('.top', 1, {
-   opacity: 1,
-   ease: Power0.easeOut,
-  onComplete: function(){
-  TweenMax.to('.top-inner', 1, {
-    opacity: 1,
-    y: -300,
-    x: 0,
-    delay: 0.25,
-    ease: Power4.easeOut,
-    onStart: () =>{
-      TweenMax.to('.top-bg', 1, {
-  			opacity: 1,
-  			ease: Power4.easeOut,
+  content.classList.add('is-block');
+    TweenMax.to(loading, .5, {
+      opacity: 0,
+      y: -500,
+      x: 0,
+      delay: 0.25,
+      ease: Power4.easeOut,
+      onComplete: function(){
+        loading.classList.add('is-none');
+        TweenMax.to('.top', 1, {
+         opacity: 1,
+         ease: Power0.easeOut,
         onComplete: function(){
-         wrap.classList.add('is-block');
-         footer.classList.add('is-block');
-         header.classList.remove('is-overflowHidden');
-
-          TweenMax.to('.wrap', 1,{
-            opacity: 1,
-            ease: Power4.easeOut
-          })
+        TweenMax.to('.top-inner', 1, {
+          opacity: 1,
+          y: -300,
+          x: 0,
+          delay: 0.25,
+          ease: Power4.easeOut,
+          onStart: () =>{
+            TweenMax.to('.top-bg', 1, {
+              opacity: 1,
+              ease: Power4.easeOut,
+              onComplete: function(){
+               wrap.classList.add('is-block');
+               footer.classList.add('is-block');
+               header.classList.remove('is-overflowHidden');
+                TweenMax.to('.wrap', 1,{
+                  opacity: 1,
+                  ease: Power4.easeOut
+                })
+              }
+            })
+          }
+        });
         }
-      })
+        });
+      }
+      });
     }
   });
-  }
-  });
-};
-});
+
 /*load error*/
 //--------------------------------------------------------------------------
 function stopload() {
@@ -66,25 +80,3 @@ function stopload() {
   topInner.classList.add('is-noOpaciy');
   topBg.classList.add('is-noOpaciy');
 }
-
-// let body = document.body;
-// let html = document.documentElement;
-// let scrollTop = body.scrollTop || html.scrollTop;
-
-//
-// var scr_count = $(window).scrollTop(); // ページトップからのスクロール量を代入
-//
-// window.addEventListener('scroll' =>(){// スクロール毎にイベントが発火します。
-//   let target = document.querySelector('#target')// 発火させたい位置の取得
-//   let obj_t_pos = target.offset().top; // 変数
-//
-//   var scr_count = jQuery(document).scrollTop() + (window.innerHeight/2); // ディスプレイの半分の高さを追加
-//   if(scr_count > obj_t_pos){
-//      // jQuery('#target').addClass('red');
-//   }else{
-//      // jQuery('#target').removeClass();
-//   }
-//
-//    })
-//
-// })
