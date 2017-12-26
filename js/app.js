@@ -2,7 +2,7 @@
 window.addEventListener('DOMContentLoaded', function(){
   setTimeout(stopload, 10000);
   let loading = document.querySelector('.is-loading');
-  let content = document.querySelector('.is-content');
+  let content = document.querySelector('.content');
   let imgCnt = 0;// 読み込んだ数カウント
   let Img = [];// イメージオブジェクト
   let IMG = [
