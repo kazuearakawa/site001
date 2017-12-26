@@ -10,7 +10,7 @@ window.addEventListener('DOMContentLoaded', function(){
     'images/sec2-Mttl.png','images/sec2-ttl01.png','images/sec2-ttl02.png',
     'images/sec2-ttl03.png','images/sec2-ttl04.png','images/sec2-ttl05.png',
     'images/sec2-ttl06.png','images/vibes.png','images/sec2-Mttl.png',
-    'images/sec3-img01.png','images/sec3-ttl01.png'
+    'images/sec3-img01.png','images/sec3-ttl01.png','images/sec3-img02.png'
   ];
     // console.log(imgCnt + " / " + IMG.length);// 何枚中何枚目かを表示
 
