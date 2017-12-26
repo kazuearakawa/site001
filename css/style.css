@@ -259,10 +259,7 @@ nav{display: none}
 /********************
   #section3
 ********************/
-#section3{
-  
-}
-#section3 .sec3-top .txt{
+#section3 .sec3Tp .txt{
   position: relative;
   padding: 20px 0 20px 475px;
   color:#6e4c21;
@@ -270,7 +267,7 @@ nav{display: none}
   border-radius: 15px;
   border: 4px dashed #10802b;
 }
-#section3 .sec3-top .txt::after{
+#section3 .sec3Tp .txt::after{
   position: absolute;
   content: '';
   width:325px;
@@ -280,11 +277,11 @@ nav{display: none}
   left: 45px;
   margin-top: -135px;
 }
-.sec3-inner{
+#section3 .sec3Bt{
   position: relative;
   padding-right: 360px;
 }
-.sec3-inner::after{
+#section3 .sec3Bt::after{
   position: absolute;
   top: 50%;
   right: 0;
@@ -293,4 +290,7 @@ nav{display: none}
   height: 273px;
   background: url('../images/sec3-img02.png')no-repeat center center;
   content: '';
+}
+#section3 .sec3Bt .txt{
+  color:#6e4c21;
 }
