@@ -3,7 +3,6 @@ window.addEventListener('DOMContentLoaded', function(){
   setTimeout(stopload, 10000);
   let loading = document.querySelector('.is-loading');
   let content = document.querySelector('.is-content');
-  let loadingWrap = document.querySelector('.is-loadingwrap');
   let imgCnt = 0;// 読み込んだ数カウント
   let Img = [];// イメージオブジェクト
   let IMG = [
@@ -29,13 +28,13 @@ function loaded() {
   let wrap = document.querySelector('.wrap');
   let footer = document.querySelector('footer');
   let header = document.querySelector('header');
-  content.classList.add('is-block');
-    TweenMax.to(loading, .7, {
-      y: -1200,
+    TweenMax.to(loading, .8, {
+      y: -2000,
       x: 0,
       delay: 0,
       ease: Power4.easeOut,
       onComplete: function(){
+        content.classList.add('is-block');
         loading.classList.add('is-none');
         TweenMax.to('.top', 1, {
          opacity: 1,
