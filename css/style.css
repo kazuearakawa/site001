@@ -196,7 +196,8 @@ nav{display: none}
 #section1 .sec1Tp .txt{
   color:#6e4c21;
   padding: 40px 25px 35px;
-  background:url(../images/sec1-bgTxt.png) no-repeat center center;
+  border-radius: 15px;
+  border: 4px dashed #10802b;
 }
 #section1 .sec1Bt{
   position: relative;
@@ -259,6 +260,20 @@ nav{display: none}
   padding-top: 165px;
 }
 #section3 .sec3-top .txt{
+  position: relative;
+  padding: 20px 0 20px 475px;
   color:#6e4c21;
   font-size: 18px;
+  border-radius: 15px;
+  border: 4px dashed #10802b;
+}
+#section3 .sec3-top .txt::after{
+  position: absolute;
+  content: '';
+  width:325px;
+  height: 270px;
+  background: url('../images/sec3-img01.png')no-repeat center center;
+  top: 50%;
+  left: 45px;
+  margin-top: -135px;
 }
