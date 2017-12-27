@@ -16,7 +16,10 @@
 .u-mb125{margin-bottom: 125px;}
 .u-mb165{margin-bottom: 165px;}
 @media (max-width:736px) {
+  /*接頭辞がu-の余白はまとめて指定したら楽かも!*/
+
 }
+
 .is-noOpaciy{opacity: 1}
 .is-block{display: block!important;}
 .is-none{display: none!important;}
@@ -43,6 +46,8 @@
   z-index: 1;
   overflow: hidden;
 }
+/*.is-loadingと.is-loading-innerの
+  overflow:hidden;を解除するとやりたいことがわかるかも*/
 .is-loading::after{/*表示されない*/
   position: absolute;
   content: '';
@@ -111,7 +116,7 @@ footer{
   display: none;
   opacity: 0;
 }
-
+/*左右に果物の画像を出すクラス*/
 /* .bgSide{
   position: relative;
   content: '';
@@ -285,10 +290,6 @@ nav{display: none}
     -webkit-transform: rotate(85deg);
     transform: rotate(85deg);
 }
-/* #section2 .bg:hover{
-    -webkit-animation: rotate202 .8s ease 0s;
-    animation: rotate202 .8s ease 0s
-} */
 /********************
   #section3
 ********************/
@@ -517,6 +518,7 @@ nav{display: none}
 /********************
   footer
 ********************/
+footer{padding-top: 20px}
 footer img{
   width: 100%;
   min-width: 1000px;
