@@ -14,7 +14,8 @@ window.addEventListener('DOMContentLoaded', function(){
     'images/sec4-img01.png','images/sec4-ttl01.png','images/sec4-ttl02.png',
     'images/sec4-ttl03.png','images/sec4-ttl04.png','images/sec4-ttl05.png',
     'images/sec4-ttl06.png','images/sec4-img02.png','images/sec5-bg01.png',
-    'images/sec5-ttl01.png','images/sec5-bg02.png','images/sec5-bg03.jpg'
+    'images/sec5-ttl01.png','images/sec5-bg02.png','images/sec5-bg03.jpg',
+    'images/sec6-bg.png','images/sec6-ttl01.png','images/sec6-img01.png','images/sec6-bg.png'
   ];
     // console.log(imgCnt + " / " + IMG.length);// 何枚中何枚目かを表示
 
