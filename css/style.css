@@ -15,13 +15,12 @@
 .u-mb125{margin-bottom: 125px;}
 .u-mb165{margin-bottom: 165px;}
 @media (max-width:736px) {
-
 }
-
 .is-noOpaciy{opacity: 1}
 .is-block{display: block!important;}
 .is-none{display: none!important;}
 .is-overflowHidden{overflow: hidden;}
+.is-height{height: 5708px!important;}
 /********************
   opennig
 ********************/
@@ -104,17 +103,31 @@ footer{
   display: none;
   text-align: center;
 }
-a{
-  text-decoration: none;
-  color: inherit;
-  transition: 0.2s ease-out;
-}
 .wrap{
   width: 980px;
   margin: 0 auto;
   display: none;
   opacity: 0;
 }
+
+/* .bgSide{
+  position: relative;
+  content: '';
+  top: 0;
+  left: 0;
+  width:217px;
+  height: 5537px; 
+  background: url(../images/main-bgLeft.png)no-repeat center center;
+}
+.bgSide::after{
+  position: absolute;
+  content: '';
+  top: 0;
+  right: 0;
+  width:229px; 
+  height: 5708px;
+  background: url(../images/main-bgRight.png)no-repeat center center;
+} */
 .font{
   font-family: "メイリオ","游ゴシック体", sans-serif;
 }
@@ -133,9 +146,8 @@ a{
 }
 .btnC img{margin: 0 auto;}
 .btnC:hover{
-  opacity: .7;
+  opacity: .6;
 }
-
 /********************
   header
 ********************/
@@ -143,7 +155,10 @@ nav{display: none}
 /********************
   top
 ********************/
-.content{display: none;}
+.content{
+  display: none;
+  width: 100%;
+}
 .top{
   position: relative;
   width: 100%;
@@ -313,7 +328,13 @@ nav{display: none}
 /********************
   #section4
 ********************/
-#section4 {}
+#section4 h3 img,
+#section4 h2 img{
+  margin: 0 auto;
+}
+#section4 .tree img{
+  margin:0 auto;
+}
 
 /********************
   #section5
