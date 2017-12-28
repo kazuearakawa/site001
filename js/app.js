@@ -1,24 +1,27 @@
 'use strict';
+
+let loading = document.querySelector('.is-loading');
+let content = document.querySelector('.content');
+let imgCnt = 0;// 読み込んだ数カウント
+let Img = [];// イメージオブジェクト
+let IMG = [
+  'images/bg-top01.jpg','images/bg-top02.jpg','images/bg-top03.png','images/bg-top04.png','images/bg.jpg','images/sec1-txt.png','images/sec1-txt.png',
+  'images/sec2-Mttl.png','images/sec2-ttl01.png','images/sec2-ttl02.png',
+  'images/sec2-ttl03.png','images/sec2-ttl04.png','images/sec2-ttl05.png',
+  'images/sec2-ttl06.png','images/vibes.png','images/sec2-Mttl.png',
+  'images/sec3-img01.png','images/sec3-ttl01.png','images/sec3-img02.png',
+  'images/sec4-img01.png','images/sec4-ttl01.png','images/sec4-ttl02.png',
+  'images/sec4-ttl03.png','images/sec4-ttl04.png','images/sec4-ttl05.png',
+  'images/sec4-ttl06.png','images/sec4-img02.png','images/sec5-bg01.png',
+  'images/sec5-ttl01.png','images/sec5-bg02.png','images/sec5-bg03.jpg',
+  'images/sec6-bg01.png','images/sec6-bg02.png','images/sec6-ttl01.png',
+  'images/sec6-img01.png'
+];
+
+
 window.addEventListener('DOMContentLoaded', function(){
   setTimeout(stopload, 10000);
-  let loading = document.querySelector('.is-loading');
-  let content = document.querySelector('.content');
-  let imgCnt = 0;// 読み込んだ数カウント
-  let Img = [];// イメージオブジェクト
-  let IMG = [
-    'images/bg-top01.jpg','images/bg-top02.jpg','images/bg-top03.png','images/bg-top04.png','images/bg.jpg','images/sec1-txt.png','images/sec1-txt.png',
-    'images/sec2-Mttl.png','images/sec2-ttl01.png','images/sec2-ttl02.png',
-    'images/sec2-ttl03.png','images/sec2-ttl04.png','images/sec2-ttl05.png',
-    'images/sec2-ttl06.png','images/vibes.png','images/sec2-Mttl.png',
-    'images/sec3-img01.png','images/sec3-ttl01.png','images/sec3-img02.png',
-    'images/sec4-img01.png','images/sec4-ttl01.png','images/sec4-ttl02.png',
-    'images/sec4-ttl03.png','images/sec4-ttl04.png','images/sec4-ttl05.png',
-    'images/sec4-ttl06.png','images/sec4-img02.png','images/sec5-bg01.png',
-    'images/sec5-ttl01.png','images/sec5-bg02.png','images/sec5-bg03.jpg',
-    'images/sec6-bg01.png','images/sec6-bg02.png','images/sec6-ttl01.png',
-    'images/sec6-img01.png'
-  ];
-    // console.log(imgCnt + " / " + IMG.length);// 何枚中何枚目かを表示
+  // console.log(imgCnt + " / " + IMG.length);// 何枚中何枚目かを表示
 
   for(let i = 0; i < IMG.length; i++){
     Img[i] = new Image();
@@ -27,7 +30,7 @@ window.addEventListener('DOMContentLoaded', function(){
     imgCnt++;// 読み込んだカウントアップ
     // console.log(imgCnt + " / " + IMG.length);// 何枚中何枚目かを表示
 
-  if(imgCnt === IMG.length) loaded();// カウントと画像数が一緒になったら実行
+    if(imgCnt === IMG.length) loaded();// カウントと画像数が一緒になったら実行
   };
 }
 // ロード完了時に呼び出し
@@ -64,9 +67,9 @@ function loaded() {
                 TweenMax.to('.wrap', 1,{
                   opacity: 1,
                   ease: Power4.easeOut
-                })
+                });
               }
-            })
+            });
           }
         });
         }
@@ -74,7 +77,7 @@ function loaded() {
       }
       });
     }
-  });
+});
 
 /*load error*/
 //--------------------------------------------------------------------------
@@ -84,5 +87,5 @@ function stopload() {
   let topBg = document.querySelector('.top-bg');
   top.classList.add('is-noOpaciy');
   topInner.classList.add('is-noOpaciy');
-  topBg.classList.add('is-noOpaciy');
+  // topBg.classList.add('is-noOpaciy');
 }
