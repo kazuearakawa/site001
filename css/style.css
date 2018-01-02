@@ -122,24 +122,28 @@ footer{
   opacity: 0;
 }
 /*左右に果物の画像を出すクラス*/
-/* .bgSide{
-  position: relative;
+.bgSide {
+  position:relative;
+  width:100%;
+}
+.bgSide::before{
+  position: absolute;
   content: '';
-  top: 0;
+  top: 100vh;
   left: 0;
   width:217px;
-  height: 5537px; 
-  background: url(../images/main-bgLeft.png)no-repeat center center;
+  height: 5537px;
+  background:url('../images/main-bgLeft.png') no-repeat center center;
 }
 .bgSide::after{
   position: absolute;
   content: '';
-  top: 0;
+  top: 100vh;
   right: 0;
   width:229px; 
-  height: 5708px;
-  background: url(../images/main-bgRight.png)no-repeat center center;
-} */
+  height:5708px;
+  background:url('../images/main-bgRight.png') no-repeat center center;
+}
 .font{
   font-family: "メイリオ","游ゴシック体", sans-serif;
 }
