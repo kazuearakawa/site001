@@ -30,6 +30,7 @@
 .is-none{display: none!important;}
 .is-overflowHidden{overflow: hidden;}
 .is-height{height: 5708px!important;}
+
 /********************
   opennig
 ********************/
@@ -122,28 +123,24 @@ footer{
   opacity: 0;
 }
 /*左右に果物の画像を出すクラス*/
-.bgSide {
-  position:relative;
-  width:100%;
-}
-.bgSide::before{
-  position: absolute;
+/* .bgSide{
+  position: relative;
   content: '';
-  top: 100vh;
+  top: 0;
   left: 0;
   width:217px;
-  height: 5537px;
-  background:url('../images/main-bgLeft.png') no-repeat center center;
+  height: 5537px; 
+  background: url(../images/main-bgLeft.png)no-repeat center center;
 }
 .bgSide::after{
   position: absolute;
   content: '';
-  top: 100vh;
+  top: 0;
   right: 0;
   width:229px; 
-  height:5708px;
-  background:url('../images/main-bgRight.png') no-repeat center center;
-}
+  height: 5708px;
+  background: url(../images/main-bgRight.png)no-repeat center center;
+} */
 .font{
   font-family: "メイリオ","游ゴシック体", sans-serif;
 }
@@ -268,7 +265,6 @@ nav{display: none}
   background: url(../images/sec1-bg.jpg) no-repeat center center;
   width: 100%;
   height: 250px;
-  border-radius:20px;
 }
 #section1 .sec1Bt img{
   position: absolute;
@@ -538,8 +534,6 @@ border-left-color:#edab6a;
   flex-wrap: wrap;
   justify-content: space-around;
   margin-bottom:80px;
-  border-radius:20px;
-
 }
 #section5 .sec5Left,
 #section5 .sec5Right{
@@ -595,22 +589,6 @@ border-left-color:#edab6a;
 /********************
   #section6
 ********************/
-#section6 > p.txt {
-  position:relative;
-  font-weight:bold;
-  height:231px;
-}
-#section6 > p.txt::after {
-  content:'';
-  width:300px;
-  height:231px;
-  position:absolute;
-  top:0;
-  right:0;
-  background:url('../images/sec6-bg01.png') no-repeat center center;
-  background-size:contain;
-  background-position:center center;
-}
 #section6 .sec6-inner{
   position: relative;
   width: 100%;
