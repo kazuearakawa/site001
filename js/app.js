@@ -38,42 +38,55 @@ function loaded() {
   let wrap = document.querySelector('.wrap');
   let footer = document.querySelector('footer');
   let header = document.querySelector('header');
+  let top = document.querySelector('.top');
     TweenMax.to(loading, .8, {
       y: -2000,
       x: 0,
       delay: 0,
       ease: Power4.easeOut,
       onComplete: function(){
-        content.classList.add('is-block');
-        loading.classList.add('is-none');
-        TweenMax.to('.top', 1, {
-         opacity: 1,
-         ease: Power0.easeOut,
-        onComplete: function(){
-        TweenMax.to('.top-inner', 1, {
-          opacity: 1,
-          y: -300,
-          x: 0,
-          delay: 0.25,
-          ease: Power4.easeOut,
-          onStart: () =>{
-            TweenMax.to('.top-bg', 1, {
-              opacity: 1,
-              ease: Power4.easeOut,
-              onComplete: function(){
-               wrap.classList.add('is-block');
-               footer.classList.add('is-block');
-               header.classList.remove('is-overflowHidden');
-                TweenMax.to('.wrap', 1,{
-                  opacity: 1,
-                  ease: Power4.easeOut
-                });
-              }
-            });
-          }
-        });
+        if(content) {
+          content.classList.add('is-block');
         }
-        });
+        loading.classList.add('is-none');
+        if(top) {
+          TweenMax.to('.top', 1, {
+           opacity: 1,
+           ease: Power0.easeOut,
+          onComplete: function(){
+          TweenMax.to('.top-inner', 1, {
+            opacity: 1,
+            y: -300,
+            x: 0,
+            delay: 0.25,
+            ease: Power4.easeOut,
+            onStart: () =>{
+              TweenMax.to('.top-bg', 1, {
+                opacity: 1,
+                ease: Power4.easeOut,
+                onComplete: function(){
+                 wrap.classList.add('is-block');
+                 footer.classList.add('is-block');
+                 header.classList.remove('is-overflowHidden');
+                  TweenMax.to('.wrap', 1,{
+                    opacity: 1,
+                    ease: Power4.easeOut
+                  });
+                }
+              });
+            }
+          });
+          }
+          });
+        } else {
+          wrap.classList.add('is-block');
+          footer.classList.add('is-block');
+          TweenMax.to('.wrap', 1,{
+            opacity:1,
+            ease:Power4.easeOut
+          });
+        }
+
       }
       });
     }

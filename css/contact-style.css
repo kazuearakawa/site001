@@ -1,0 +1,191 @@
+@charset "UTF-8";
+/********************
+  font
+********************/
+@import url(http://fonts.googleapis.com/earlyaccess/notosansjp.css);
+
+/********************
+  utility
+********************/
+.u-mb10{margin-bottom: 10px;}
+.u-mb25{margin-bottom: 25px;}
+.u-mb40{margin-bottom: 40px;}
+.u-mb50{margin-bottom: 50px;}
+.u-mT50{margin-top: 50px;}
+.u-mb55{margin-bottom: 55px;}
+.u-mb70{margin-bottom: 70px;}
+.u-mb80{margin-bottom: 80px;}
+.u-mT100{margin-top: 100px;}
+.u-mb100{margin-bottom: 100px;}
+.u-mb110{margin-bottom: 110px;}
+.u-mb125{margin-bottom: 125px;}
+.u-mb165{margin-bottom: 165px;}
+@media (max-width:736px) {
+  /*接頭辞がu-の余白はまとめて指定したら楽かも!*/
+
+}
+
+.is-noOpaciy{opacity: 1}
+.is-block{display: block!important;}
+.is-none{display: none!important;}
+.is-overflowHidden{overflow: hidden;}
+.is-height{height: 5708px!important;}
+
+/********************
+  opennig
+********************/
+.is-loading{
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  background: #fff;
+  overflow: hidden;
+}
+.is-loading-inner{
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  overflow: hidden;
+}
+/*.is-loadingと.is-loading-innerの
+  overflow:hidden;を解除するとやりたいことがわかるかも*/
+.is-loading::after{/*表示されない*/
+  position: absolute;
+  content: '';
+  width: 100%;
+  height: 100vh;
+  background: #d5b079;
+  z-index: 0;
+}
+.loader {
+  position: relative;
+  width: 40px;
+  margin: auto;
+}
+.circle {
+  position: absolute;
+  width: 38px;
+  height: 38px;
+  opacity: 0;
+  transform: rotate(225deg);
+  animation-iteration-count: infinite;
+  animation-name: orbit;
+  animation-duration: 5.5s;
+}
+.circle::after {
+  content: '';
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  border-radius: 8px;
+  background: #f39800;
+}
+.circle:nth-child(2){animation-delay: 240ms;}
+.circle:nth-child(3){animation-delay: 480ms;}
+.circle:nth-child(4){animation-delay: 720ms;}
+.circle:nth-child(5){animation-delay: 960ms;}
+@keyframes orbit {
+  0%{transform:rotate(225deg); opacity: 1; animation-timing-function: ease-out;}
+  7%{transform:rotate(345deg); animation-timing-function: linear;}
+  30%{transform:rotate(455deg); animation-timing-function: ease-in-out;}
+  39%{transform:rotate(690deg); animation-timing-function: linear;}
+  70%{transform:rotate(815deg); opacity: 1; animation-timing-function:ease-out;}
+  75%{transform:rotate(945deg); animation-timing-function: ease-out;}
+  76%{transform:rotate(945deg); opacity: 0;}
+  100%{transform:rotate(945deg); opacity: 0;}
+}
+/********************
+  default
+********************/
+*,*::after,*::before{box-sizing: border-box;}
+body{
+  width: 100%;
+  background: url(../images/bg.jpg)repeat;
+  background-color: #f39800;
+  font-weight: normal;
+}
+img{display: block}
+h1,h2,h3,h4,dt{font-weight: normal;}
+ul,li{list-style: none;}
+footer{
+  display: none;
+  text-align: center;
+}
+.wrap{
+  width: 980px;
+  margin: -100px auto 0;
+  display: none;
+  opacity: 0;
+  background:#fff;
+  border-top:solid 10px #00aa00;
+}
+.font{
+  font-family: "メイリオ","游ゴシック体", sans-serif;
+}
+.txt{
+  font-size: 16px;
+  color: #fff;
+  line-height:2em;
+}
+.btnC > a{
+    display: inline-block;
+    text-decoration: none;
+    color: rgba(255, 255, 255, 1);/*アイコン色*/
+    width:100%;
+    height: 64px;
+    line-height: 64px;
+    font-size: 36px;
+    border-radius: 10px;
+    text-align: center;
+    vertical-align: middle;
+    overflow: hidden;
+    font-weight: 400;
+    font-family:'Noto Sans JP' , sans-serif;
+    background: #067814;
+    border-bottom:5px solid #045602;
+}
+.btnC > a:hover {
+    -ms-transform: translateY(5px);
+    -webkit-transform: translateY(5px);
+    transform: translateY(5px);
+    border-bottom:none;
+}
+.btnC img{margin: 0 auto;}
+/********************
+  header
+********************/
+nav{display: none}
+/********************
+  top
+********************/
+.content{
+  display: none;
+  width: 100%;
+}
+.contact-top .logo img{
+  display: block;
+  padding-top:240px;
+  margin:0 auto 40px;
+}
+.contact-top .logo{
+  display:block;
+  width:100%;
+  height:500px;
+  background:url('../images/mikan_lp_pc_form3.jpg') no-repeat center center;
+  background-size:cover;
+}
+/********************
+  footer
+********************/
+footer{padding-top: 20px}
+footer img{
+  width: 100%;
+  min-width: 1000px;
+  min-height: 353px;
+  overflow-x: hidden;
+}
