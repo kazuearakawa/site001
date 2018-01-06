@@ -51,7 +51,12 @@ UTILITY FONT-SIZE
   font-size:36px;
   font-weight: 400;
 }
-
+/*********************
+MEDIA QUERY CLASS
+DESKTOP-FIRST
+*********************/
+.pc {display:block;}
+.sp {display:none;}
 /*********************
 LINE-FRAME
 *********************/
@@ -777,6 +782,12 @@ MOBILE & SMARTPHONE
     font-weight:normal;
   }
   /********************
+  MEDIA QUERY CLASS
+  DESKTOP-FIRST
+  ********************/
+  .pc{display:none;}
+  .sp{display:block;}
+  /********************
   default
   *********************/
   img {
@@ -811,6 +822,7 @@ MOBILE & SMARTPHONE
     height:auto;
   }
   #section1 .sec1Bt img {
+    position:relative;
     width:98%;
   }
   /**********************
