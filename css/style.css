@@ -766,7 +766,7 @@ MOBILE & SMARTPHONE
 	.u-mb80{margin-bottom: 60px;}
 	.u-mT100{margin-top: 30px;}
 	.u-mb100{margin-bottom: 40px;}
-	.u-mb110{margin-bottom: 110px;}
+	.u-mb110{margin-bottom: 70px;}
 	.u-mb125{margin-bottom: 125px;}
 	.u-mb165{margin-bottom:100px;}
   .u-mr45 {margin-right:0;}
@@ -790,6 +790,9 @@ MOBILE & SMARTPHONE
   /********************
   default
   *********************/
+  body {
+    font-size:14px;
+  }
   img {
     margin:0 auto 60px;
   }
@@ -880,11 +883,15 @@ MOBILE & SMARTPHONE
   #section4 .ball .txt {
     font-weight:normal;
     text-align:center;
+    font-size:14px;
   }
 
   /************************
   section5~section6
   ************************/
+  #section5 .sec5Tp {
+    background:none;
+  }
   #section5 .sec5Tp p.txt {
     margin-bottom:20px;
   }
