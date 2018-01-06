@@ -727,6 +727,7 @@ footer img{
   width:100%;
   min-height: 353px;
   overflow-x: hidden;
+  max-width:100%;
 }
 /********************
 MEDIA QUERY SUPPORT
