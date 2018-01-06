@@ -953,9 +953,9 @@ MOBILE & SMARTPHONE
     border-radius:5px;
   }
 }
-@media only screen and (max-width:501px) {
+@media only screen and (max-width:630px) {
   #section4 .ball:nth-child(1) {
-    top:-10px;
+    top:10px;
     right:0;
     width:150px;
     height:150px;
@@ -999,7 +999,7 @@ MOBILE & SMARTPHONE
     height:140px;
   }
 }
-@media only screen and (min-width:501px) and (max-width:886px){
+@media only screen and (min-width:630px) and (max-width:886px){
   #section4 .ball:nth-child(1) {
     top:-2em;
     right:6em;
