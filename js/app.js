@@ -2,8 +2,8 @@
 
 let loading = document.querySelector('.is-loading');
 let content = document.querySelector('.content');
-let imgCnt = 0;// 読み込んだ数カウント
-let Img = [];// イメージオブジェクト
+let imgCnt = 0;
+let Img = [];
 let IMG = [
   'images/bg-top01.jpg','images/bg-top02.jpg','images/bg-top03.png','images/bg-top04.png','images/bg.jpg','images/sec1-txt.png','images/sec1-txt.png',
   'images/sec2-Mttl.png','images/sec2-ttl01.png','images/sec2-ttl02.png',
@@ -18,22 +18,20 @@ let IMG = [
   'images/sec6-img01.png'
 ];
 
-
 window.addEventListener('DOMContentLoaded', function(){
   setTimeout(stopload, 10000);
-  // console.log(imgCnt + " / " + IMG.length);// 何枚中何枚目かを表示
 
   for(let i = 0; i < IMG.length; i++){
     Img[i] = new Image();
     Img[i].src = IMG[i];
-    Img[i].onload = function() {//1枚の画像が読み込み完了したら呼び出し
-    imgCnt++;// 読み込んだカウントアップ
-    // console.log(imgCnt + " / " + IMG.length);// 何枚中何枚目かを表示
-
-    if(imgCnt === IMG.length) loaded();// カウントと画像数が一緒になったら実行
+    Img[i].onload = function() {
+    imgCnt++;
+    if(imgCnt === IMG.length) loaded();
   };
 }
-// ロード完了時に呼び出し
+
+/*load comp*/
+//--------------------------------------------------------------------------
 function loaded() {
   let wrap = document.querySelector('.wrap');
   let footer = document.querySelector('footer');
@@ -86,7 +84,6 @@ function loaded() {
             ease:Power4.easeOut
           });
         }
-
       }
       });
     }
@@ -100,5 +97,4 @@ function stopload() {
   let topBg = document.querySelector('.top-bg');
   top.classList.add('is-noOpaciy');
   topInner.classList.add('is-noOpaciy');
-  // topBg.classList.add('is-noOpaciy');
 }
