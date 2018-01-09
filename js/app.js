@@ -95,6 +95,8 @@ function stopload() {
   let top = document.querySelector('.top');
   let topInner = document.querySelector('.top-inner');
   let topBg = document.querySelector('.top-bg');
-  top.classList.add('is-noOpaciy');
-  topInner.classList.add('is-noOpaciy');
+  if(top) {
+    top.classList.add('is-noOpaciy');
+    topInner.classList.add('is-noOpaciy');
+  }
 }
